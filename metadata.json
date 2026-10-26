@@ -1,0 +1,6 @@
+{
+  "name": "MotionForge",
+  "description": "An open-source laboratory and developer workbench for discovering, customizing, previewing, and exporting art-directed web animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

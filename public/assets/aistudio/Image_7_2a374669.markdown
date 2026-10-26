@@ -1,0 +1,231 @@
+---
+name: Motion Laboratory
+colors:
+  surface: '#fbf8fe'
+  surface-dim: '#dcd9de'
+  surface-bright: '#fbf8fe'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f6f2f8'
+  surface-container: '#f0edf2'
+  surface-container-high: '#eae7ed'
+  surface-container-highest: '#e4e1e7'
+  on-surface: '#1b1b1f'
+  on-surface-variant: '#5a403c'
+  inverse-surface: '#303034'
+  inverse-on-surface: '#f3f0f5'
+  outline: '#8f706b'
+  outline-variant: '#e3beb8'
+  surface-tint: '#b52515'
+  primary: '#b52515'
+  on-primary: '#ffffff'
+  primary-container: '#ff5a43'
+  on-primary-container: '#5e0300'
+  inverse-primary: '#ffb4a7'
+  secondary: '#006971'
+  on-secondary: '#ffffff'
+  secondary-container: '#5aedfd'
+  on-secondary-container: '#006a72'
+  tertiary: '#5d48ca'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#9281ff'
+  on-tertiary-container: '#280090'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdad4'
+  primary-fixed-dim: '#ffb4a7'
+  on-primary-fixed: '#400100'
+  on-primary-fixed-variant: '#920600'
+  secondary-fixed: '#88f3ff'
+  secondary-fixed-dim: '#3ed9e9'
+  on-secondary-fixed: '#001f23'
+  on-secondary-fixed-variant: '#004f56'
+  tertiary-fixed: '#e5deff'
+  tertiary-fixed-dim: '#c8bfff'
+  on-tertiary-fixed: '#190064'
+  on-tertiary-fixed-variant: '#442cb1'
+  background: '#fbf8fe'
+  on-background: '#1b1b1f'
+  surface-variant: '#e4e1e7'
+typography:
+  display-hero:
+    fontFamily: Space Grotesk
+    fontSize: 56px
+    fontWeight: '700'
+    lineHeight: 64px
+    letterSpacing: -0.03em
+  display-hero-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Space Grotesk
+    fontSize: 36px
+    fontWeight: '600'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Space Grotesk
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Space Grotesk
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Hanken Grotesk
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Hanken Grotesk
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Hanken Grotesk
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.01em
+  code-inspector:
+    fontFamily: JetBrains Mono
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: -0.01em
+  label-code-caps:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.08em
+  label-numeric:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-desktop: 1.5rem
+  margin: 1rem
+  margin-tablet: 1.5rem
+  margin-desktop: 2.5rem
+  space-2xs: 0.125rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+  space-2xl: 2.5rem
+  space-3xl: 4rem
+---
+
+## Brand & Style
+
+This design system establishes an editorial creative-coding environment for high-craft web animation engineers and digital artists. The aesthetic balances the tactile discipline of traditional printmaking studios with the analytical rigor of developer toolchains. 
+
+### Core Ethos
+- **Tactile Paper Meets Technical Rigor**: High-precision parameters, bezier handles, and telemetry monitors live inside an editorial grid structured by fine ink lines, warm parchment layers, and purposeful micro-interactions.
+- **Instrumental Focus**: Chrome never competes with the canvas. Controls emulate vintage optical bench equipment and studio drafting boards—calibrated, responsive, and functional.
+- **Dynamic Chromatic Energy**: Subdued substrate layers allow saturated pigment accents to guide eye movement, signal keyframe states, and highlight procedural math outputs without visual exhaustion.
+
+## Colors
+
+The palette establishes an analog studio foundation overlaid with functional digital pigments.
+
+### Foundations & Substrates
+- **Parchment Surface (`#F9F6F0`)**: Base background simulating unbleached archival paper.
+- **Warm Sand Layer (`#EFE9DE`)**: Recessed canvas areas, control well insets, and passive panels.
+- **Studio Cardboard (`#E2DACB`)**: Hover states, micro-panel borders, and structural splitters.
+- **Chalkboard Dark (`#121316`)**: Full dark-mode inversion, inspector consoles, and code editor viewports.
+- **Charcoal Ink (`#1A1A1E`)**: Primary reading typography, crisp iconography, and high-emphasis boundaries.
+- **Crisp Ink (`#0F0F12`)**: Deepest contrast line work, high-contrast toggles, and terminal headers.
+
+### Chromatic Pigments
+- **Origami Coral (`#FF5A43`)**: Primary interactive focal points, active timeline playback heads, keyframe nodes, and record states.
+- **Cyan Pigment (`#00C2D1`)**: Secondary accent, velocity curves, vector motion paths, and active inspector handles.
+- **Studio Yellow (`#FFC83B`)**: Warning indicators, performance throttling notices, and tween interpolation states.
+- **Crayon Lavender (`#8E7CFF`)**: Physics spring curves, tertiary easing functions, and documentation highlights.
+- **Mint Foliage (`#2ECC71`)**: Compiled successfully states, 60fps indicators, and optimized frame passes.
+
+## Typography
+
+The typographic hierarchy utilizes three specialized typefaces working in tandem:
+
+- **Space Grotesk (Display & Section Titles)**: Delivers structural rhythm with humanized geometric quirks. Display weights anchor hero views and experimental lab showcases.
+- **Hanken Grotesk (Interface & Editorial Reading)**: High-legibility grotesque engineered for neutral dense copy, settings dialogs, and instructional guidelines.
+- **JetBrains Mono (Telemetry, Syntax, & Coordinates)**: Provides unambiguous character distinction for floating point coordinates, cubic-bezier values, code editor tabs, and mechanical control readouts. All tabular data and numeric sliders lock to this family.
+
+## Layout & Spacing
+
+Layouts rely on an asymmetric drafting-board structure designed to scale from compact touchscreens to high-density multi-display setups.
+
+### Grid & Layout Rules
+- **Desktop (1024px+)**: 12-column layout split into fixed-width tool rails (280px–360px) and a flex center work surface for the stage canvas. Gutter spaces lock to `1.5rem` (`gutter-desktop`).
+- **Tablet (768px - 1023px)**: 8-column layout. Control drawers collapse into bottom sliding sheets with pinned parameter scrubbing.
+- **Mobile (< 768px)**: 4-column layout. Margin compresses to `1rem`. Floating canvas occupies the upper viewport half; tabbed micro-controls occupy the lower viewport half. Touch targets maintain a minimum 44px hit-box via invisible bounding padding while keeping visual chrome compact.
+
+## Elevation & Depth
+
+This system avoids blurred realistic drop-shadows. Depth is derived strictly from architectural drafting mechanics:
+
+- **Low-Contrast Structural Borders**: Panels, inspectors, and tool strips sit on 1px solid borders (`#1A1A1E` at 12% to 20% opacity on light surfaces; `#FFFFFF` at 10% on chalkboard dark surfaces).
+- **Physical Hard Drop Offsets**: Elevated floating elements (such as timeline drag handles, floating transport controls, and contextual menus) utilize solid, unblurred 2px or 4px offsets in charcoal (`#1A1A1E`), emulating precision laser-cut layered cardboard plates.
+- **Surface Layer Stacking**:
+  - `Level 0 (Floor)`: `#F9F6F0` (Archival parchment stage)
+  - `Level 1 (Panels & Trays)`: `#EFE9DE` (Recessed instrument trays)
+  - `Level 2 (Active Cards & Floating Menus)`: `#FFFFFF` with 1px border and 2px `#1A1A1E` solid hard offset
+  - `Level 3 (Dark Code Matrix)`: `#121316` high-contrast terminal overlay
+
+## Shapes
+
+The design system employs a restrained `Soft (1)` corner radius (4px standard base) across controls and panels. 
+
+- Interactive buttons, numerical input badges, and segmented tab pills use standard `4px` radii (`roundedness: 1`), conveying a calibrated instrument aesthetic.
+- Floating modal sheets and contextual drawer dialogs use `8px` (`rounded-lg`).
+- Drag scrubbers, timeline playhead indicators, and keyframe points retain precise geometric silhouettes: pure diamonds (45° rotated squares) or sharp circular control beads (50% radius) sized strictly to 8px–12px bounds.
+
+## Components
+
+### Buttons & Transport Controls
+- **Primary Action (Record / Run / Export)**: Background filled with Origami Coral (`#FF5A43`), label text in `#FFFFFF`, framed with 1px `#1A1A1E`. On press: 1px diagonal translate down-right to simulate mechanical actuation.
+- **Secondary Action**: Background `#EFE9DE`, crisp 1px `#1A1A1E` border, text in `#1A1A1E`. Hover triggers a tint shift to `#E2DACB`.
+- **Ghost Utility**: Transparent substrate, monospaced label with bracketed frame accents (`[ Reset ]`), active color shifts to Cyan Pigment (`#00C2D1`).
+
+### Form Inputs & Scrubbers
+- **Numeric Control Sliders**: Integrated input box containing a JetBrains Mono numeric readout paired with an interactive scrub lane. The filled track uses Cyan Pigment (`#00C2D1`), while the unfilled track shows a dotted or low-opacity neutral line. Touch dragging initiates an overlay magnified value pill.
+- **Code Inspector Tabs**: Monospaced folder-tab styling. Inactive tabs render on `#EFE9DE` with muted gray text. Active tab locks to Charcoal Ink (`#1A1A1E`) with high-contrast text and a top accent stroke of Origami Coral (`#FF5A43`).
+
+### Selection Controls (Checkboxes, Toggles, Radio)
+- **Checkboxes**: 14px square, 2px rounded corners, 1px solid border. Checked state fills with Crisp Ink (`#0F0F12`) featuring a stark white geometric checkmark.
+- **Toggles (Switches)**: Compact rectangular track (28px × 16px) with an interior sliding square pip (10px × 10px). Active state illuminates track in Mint Foliage (`#2ECC71`).
+
+### Cards & Lab Modules
+- Base module constructed with 1px solid `#1A1A1E` border over `#FFFFFF` or `#F9F6F0`. Header strip contains section classification formatted in `label-code-caps` (`JetBrains Mono`, 11px uppercase, tracking `0.08em`) with an option for an FPS frame-counter badge.
+
+### Interactive Canvas Zone
+- Framed by a subtle dotted grid matrix (`#1A1A1E` at 6% opacity) with coordinate ticks at the four inner corners. Dynamic overlay handles for velocity curves render in Coral and Cyan vectors with 2px draggable control nodes.

@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-surface: #fbf8fe;
+  --color-parchment: #f9f6f0;
+  --color-sand: #efe9de;
+  --color-cardboard: #e2dacb;
+  --color-surface-dim: #dcd9de;
+  --color-surface-bright: #fbf8fe;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f2f8;
+  --color-surface-container: #f0edf2;
+  --color-surface-container-high: #eae7ed;
+  --color-surface-container-highest: #e4e1e7;
+  --color-on-surface: #1b1b1f;
+  --color-on-surface-variant: #5a403c;
+  --color-inverse-surface: #18181c;
+  --color-inverse-on-surface: #f3f0f5;
+  --color-outline: #8f706b;
+  --color-outline-variant: #e3beb8;
+  --color-primary: #b52515;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ff5a43;
+  --color-on-primary-container: #5e0300;
+  --color-primary-fixed: #ffdad4;
+  --color-primary-fixed-dim: #ffb4a7;
+  --color-secondary: #006971;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #5aedfd;
+  --color-on-secondary-container: #006a72;
+  --color-secondary-fixed: #88f3ff;
+  --color-secondary-fixed-dim: #3ed9e9;
+  --color-tertiary: #5d48ca;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #9281ff;
+  --color-tertiary-fixed: #e5deff;
+  --color-tertiary-fixed-dim: #c8bfff;
+  --color-mint: #2ecc71;
+  --color-studio-yellow: #ffc83b;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #fbf8fe;
+    color: #1b1b1f;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-headline {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-code, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.drafting-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.drafting-grid-light {
+  background-image: radial-gradient(rgba(27, 27, 31, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

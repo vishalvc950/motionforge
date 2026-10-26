@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#ff5a43", "background": "#fbf8fe", "on-tertiary-fixed": "#190064", "error-container": "#ffdad6", "surface-variant": "#e4e1e7", "inverse-on-surface": "#f3f0f5", "surface-container": "#f0edf2", "tertiary-container": "#9281ff", "secondary-fixed-dim": "#3ed9e9", "tertiary-fixed": "#e5deff", "on-secondary-container": "#006a72", "inverse-primary": "#ffb4a7", "primary-fixed-dim": "#ffb4a7", "on-error": "#ffffff", "surface-container-highest": "#e4e1e7", "outline": "#8f706b", "on-primary-fixed": "#400100", "error": "#ba1a1a", "surface-dim": "#dcd9de", "primary": "#b52515", "on-tertiary-fixed-variant": "#442cb1", "surface-bright": "#fbf8fe", "on-tertiary-container": "#280090", "surface": "#fbf8fe", "secondary-container": "#5aedfd", "surface-container-low": "#f6f2f8", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#920600", "primary-fixed": "#ffdad4", "on-surface": "#1b1b1f", "on-secondary-fixed": "#001f23", "on-background": "#1b1b1f", "tertiary-fixed-dim": "#c8bfff", "on-surface-variant": "#5a403c", "inverse-surface": "#303034", "on-primary": "#ffffff", "on-primary-container": "#5e0300", "surface-container-high": "#eae7ed", "secondary": "#006971", "tertiary": "#5d48ca", "outline-variant": "#e3beb8", "secondary-fixed": "#88f3ff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "on-secondary-fixed-variant": "#004f56", "surface-tint": "#b52515" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin-tablet": "1.5rem", "space-md": "0.75rem", "space-2xl": "2.5rem", "space-3xl": "4rem", "margin": "1rem", "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-lg": "1rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "space-xl": "1.5rem", "gutter": "1rem", "gutter-desktop": "1.5rem" }, fontFamily: { "label-numeric": ["JetBrains Mono"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "code-inspector": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "body-lg": ["Hanken Grotesk"], "display-hero": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "display-hero-mobile": ["Space Grotesk"], "label-code-caps": ["JetBrains Mono"] }, fontSize: { "label-numeric": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "code-inspector": ["13px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "400" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-code-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-inverse-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">deployed_code</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight truncate">MotionForge</span><span class="px-space-xs py-space-2xs bg-secondary/30 rounded-DEFAULT font-label-code-caps text-label-code-caps text-secondary-fixed shrink-0">v2.4</span></div><span class="font-label-code-caps text-label-code-caps text-surface-variant truncate">Playground</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="h-8 px-space-sm bg-surface-container-highest/20 rounded-full flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-label-code-caps text-label-code-caps text-inverse-on-surface">LAB ACTIVE</span></div><a aria-label="GitHub Repo" class="h-9 px-space-sm bg-surface-container-highest/15 rounded-lg flex items-center gap-space-xs text-inverse-on-surface hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">star</span><span class="font-label-numeric text-label-numeric text-inverse-on-surface">12.4k</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-10 gap-space-lg">
+<!-- Switcher & Preset Tray -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-2xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">animation</span>
+<select class="bg-surface-container-lowest font-headline-sm text-headline-sm text-on-surface py-space-2xs px-space-xs rounded-lg shadow-sm outline-none appearance-none truncate cursor-pointer pr-space-lg" id="anim-switcher">
+<option selected="">01. PaperStorm (3D Origami Deconstruction)</option>
+<option>02. LiquidMercury (Surface Tension Mesh)</option>
+<option>03. CyberKinetic (Kinetic Typography Matrix)</option>
+<option>04. PrismEcho (Volumetric Refraction)</option>
+</select>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] pointer-events-none -ml-6 mr-1">unfold_more</span>
+</div>
+<!-- Presets Micro Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-2xs">
+<span class="font-label-code-caps text-label-code-caps text-on-surface-variant uppercase tracking-wider shrink-0 mr-1">Presets:</span>
+<button class="preset-pill px-space-sm py-space-2xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code-caps text-label-code-caps shrink-0 transition-transform active:scale-95 shadow-sm" onclick="applyPreset('subtle', 90, 0.6, 1.2, 80, 45)">Subtle</button>
+<button class="preset-pill px-space-sm py-space-2xs rounded-full bg-primary-container text-on-primary font-label-code-caps text-label-code-caps shrink-0 transition-transform active:scale-95 shadow-sm font-semibold" onclick="applyPreset('cinematic', 180, 1.4, 1.8, 140, 180)">Cinematic</button>
+<button class="preset-pill px-space-sm py-space-2xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code-caps text-label-code-caps shrink-0 transition-transform active:scale-95 shadow-sm" onclick="applyPreset('playful', 260, 2.1, 2.2, 220, 290)">Playful</button>
+<button class="preset-pill px-space-sm py-space-2xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code-caps text-label-code-caps shrink-0 transition-transform active:scale-95 shadow-sm" onclick="applyPreset('extreme', 380, 3.0, 3.4, 280, 360)">Extreme Dispersal</button>
+</div>
+</div>
+<!-- Interactive 3D Paper Viewport Stage -->
+<div class="flex flex-col bg-inverse-surface rounded-xl overflow-hidden shadow-lg">
+<!-- Viewport HUD Overlay -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-md">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span class="font-label-numeric text-label-numeric text-secondary-fixed" id="fps-counter">60.0 FPS</span>
+</div>
+<div class="h-3 w-px bg-surface-variant/30"></div>
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-code-caps text-label-code-caps text-surface-variant">FRAGS:</span>
+<span class="font-label-numeric text-label-numeric text-primary-fixed-dim" id="hud-fragment-val">180</span>
+</div>
+</div>
+<!-- Viewport Size Mode -->
+<div class="flex items-center gap-space-2xs bg-surface-container-highest/20 rounded-md p-space-2xs">
+<button class="px-space-xs py-space-2xs rounded-DEFAULT bg-secondary/40 text-secondary-fixed font-label-code-caps text-label-code-caps">390px</button>
+<button class="px-space-xs py-space-2xs rounded-DEFAULT text-surface-variant hover:text-inverse-on-surface font-label-code-caps text-label-code-caps">768px</button>
+<button class="px-space-xs py-space-2xs rounded-DEFAULT text-surface-variant hover:text-inverse-on-surface font-label-code-caps text-label-code-caps">FULL</button>
+</div>
+</div>
+<!-- Live Rendered 3D Paper Canvas Zone -->
+<div class="relative w-full h-72 bg-gradient-to-b from-inverse-surface via-surface-dim/20 to-inverse-surface flex items-center justify-center overflow-hidden cursor-crosshair select-none touch-none" id="canvas-stage">
+<!-- Coordinate Corner Guides -->
+<div class="absolute top-2 left-2 text-surface-variant/40 font-label-code-caps text-[9px] pointer-events-none">[0,0,0]</div>
+<div class="absolute top-2 right-2 text-surface-variant/40 font-label-code-caps text-[9px] pointer-events-none">[X:390 Y:288]</div>
+<div class="absolute bottom-2 left-2 text-surface-variant/40 font-label-code-caps text-[9px] pointer-events-none">ROT: 42.8°</div>
+<div class="absolute bottom-2 right-2 flex items-center gap-space-2xs text-secondary-fixed-dim font-label-code-caps text-[9px] pointer-events-none">
+<span class="material-symbols-outlined text-[12px]">touch_app</span> DRAG TO DEFORM
+      </div>
+<!-- Origami Geometric Visual Asset -->
+<div class="relative w-48 h-48 flex items-center justify-center transition-transform duration-700 ease-out" id="origami-cluster">
+<img class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.5)] transition-all duration-500 scale-100" data-alt="Dynamic 3D geometric faceted origami paper sculpture deconstructed into floating triangular polygons, vibrant coral orange, crisp architectural paper folds with ambient teal studio rim lighting and crisp sharp edges on a dark architectural background." id="origami-render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYT7NnHkLKyo4heyfHDau6quJG9B1-ge1E-cbpjJ3RZGbjBZRFMXwDl2INWQ022VRCHOujc9_p8LLt0bq28QnQ2NYf-2p-ZgMZoJBf3j4rIln3kZmEYiDtl8CLz_eUoVl5VQCPRjoEvebzP1l0hKoLUZrABZocZXZm7hc_TZKl61Zy-PVHWdpcEMmHKDcjiVSv-gvmlxtJtrFQq5eQpZ4KHsMkFlohlQgGmxVfyjNe3oVS49anIio"/>
+<!-- Floating Kinetic Particle Nodes (Procedural Simulated Mesh) -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center" id="particle-field">
+<div class="absolute w-4 h-4 bg-primary-container/80 rounded-DEFAULT rotate-45 transform transition-transform duration-500" style="transform: translate(-38px, -45px) rotate(22deg);"></div>
+<div class="absolute w-3 h-5 bg-secondary-fixed/90 transform transition-transform duration-500" style="transform: translate(52px, -30px) rotate(65deg) skewX(12deg);"></div>
+<div class="absolute w-5 h-3 bg-tertiary-fixed-dim transform transition-transform duration-500" style="transform: translate(-50px, 40px) rotate(-40deg);"></div>
+<div class="absolute w-3 h-3 bg-surface-container-lowest transform transition-transform duration-500 shadow-md" style="transform: translate(44px, 50px) rotate(15deg);"></div>
+<div class="absolute w-6 h-2 bg-primary-fixed-dim/90 transform transition-transform duration-500" style="transform: translate(5px, 60px) rotate(-70deg);"></div>
+</div>
+</div>
+<!-- Interaction Ripple Effect Layer -->
+<div class="absolute w-24 h-24 rounded-full bg-secondary-fixed-dim/15 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 transition-all duration-300" id="ripple-circle"></div>
+</div>
+<!-- Scrub Timeline & Mechanical Actuation Transport -->
+<div class="flex flex-col bg-surface-container-highest/15 p-space-sm gap-space-xs">
+<div class="flex items-center justify-between text-inverse-on-surface">
+<span class="font-label-numeric text-label-numeric text-primary-fixed-dim" id="timeline-time">0.68s</span>
+<span class="font-label-code-caps text-label-code-caps text-surface-variant">LOOP: 1.80s</span>
+</div>
+<!-- Interactive Scrubber Lane -->
+<div class="relative w-full h-6 flex items-center cursor-pointer" id="scrubber-bar">
+<div class="w-full h-1.5 bg-surface-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" id="scrub-progress" style="width: 38%;"></div>
+</div>
+<div class="absolute h-4 w-4 rounded-DEFAULT bg-surface-container-lowest shadow-md flex items-center justify-center transform -translate-x-1/2 cursor-grab active:cursor-grabbing" id="scrub-thumb" style="left: 38%;">
+<div class="w-1 h-2 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Transport Action Row -->
+<div class="flex items-center justify-between pt-space-2xs">
+<div class="flex items-center gap-space-xs">
+<!-- Play / Pause -->
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-headline-sm text-[13px] flex items-center gap-space-2xs shadow-md transition-transform active:translate-y-0.5" id="btn-play-pause" onclick="togglePlayState()">
+<span class="material-symbols-outlined text-[18px] text-primary" id="play-icon" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span class="font-label-code-caps text-label-code-caps" id="play-text">PAUSE</span>
+</button>
+<!-- Explode Trigger -->
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary font-label-code-caps text-label-code-caps flex items-center gap-space-2xs shadow-md transition-transform active:translate-y-0.5" onclick="triggerExplode()">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+            EXPLODE
+          </button>
+<!-- Reassemble -->
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-highest/30 text-inverse-on-surface hover:text-white font-label-code-caps text-label-code-caps flex items-center gap-space-2xs shadow-sm transition-transform active:translate-y-0.5" onclick="triggerReassemble()">
+<span class="material-symbols-outlined text-[16px]">join_inner</span>
+            ASSEMBLE
+          </button>
+</div>
+<!-- Tactile Reset Icon Button -->
+<button class="w-9 h-9 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/40 text-inverse-on-surface flex items-center justify-center transition-all active:rotate-180" onclick="resetDefaults()" title="Reset to Defaults">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dynamic Calibration Parameter Panel -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-low -mx-space-md -mt-space-md px-space-md pt-space-sm rounded-t-xl">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Kinetic Parameters</span>
+</div>
+<span class="font-label-code-caps text-label-code-caps px-space-xs py-space-2xs rounded-full bg-secondary-container text-on-secondary-container">CALIBRATED</span>
+</div>
+<!-- Parameter Sliders Grid -->
+<div class="flex flex-col gap-space-md">
+<!-- Slider 1: Fragment Count -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-code-caps text-label-code-caps text-on-surface-variant flex items-center gap-space-2xs">
+<span>FRAGMENT COUNT</span>
+<span class="material-symbols-outlined text-[14px] text-outline">help</span>
+</label>
+<div class="px-space-xs py-space-2xs bg-surface-container rounded-DEFAULT font-label-numeric text-label-numeric text-on-surface" id="val-fragments">180</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-full appearance-none accent-primary cursor-pointer" max="400" min="60" oninput="updateParam('fragments', this.value, '')" step="10" type="range" value="180"/>
+</div>
+<!-- Slider 2: Explosion Intensity -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-code-caps text-label-code-caps text-on-surface-variant">EXPLOSION INTENSITY</label>
+<div class="px-space-xs py-space-2xs bg-surface-container rounded-DEFAULT font-label-numeric text-label-numeric text-on-surface" id="val-intensity">1.4x</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-full appearance-none accent-primary cursor-pointer" max="3.0" min="0.1" oninput="updateParam('intensity', this.value, 'x')" step="0.1" type="range" value="1.4"/>
+</div>
+<!-- Slider 3: Reassembly Duration -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-code-caps text-label-code-caps text-on-surface-variant">REASSEMBLY DURATION</label>
+<div class="px-space-xs py-space-2xs bg-surface-container rounded-DEFAULT font-label-numeric text-label-numeric text-on-surface" id="val-duration">1.8s</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-full appearance-none accent-primary cursor-pointer" max="5.0" min="0.5" oninput="updateParam('duration', this.value, 's')" step="0.1" type="range" value="1.8"/>
+</div>
+<!-- Slider 4: Mouse Interaction Radius -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-code-caps text-label-code-caps text-on-surface-variant">INTERACTION RADIUS</label>
+<div class="px-space-xs py-space-2xs bg-surface-container rounded-DEFAULT font-label-numeric text-label-numeric text-on-surface" id="val-radius">140px</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-full appearance-none accent-secondary cursor-pointer" max="300" min="50" oninput="updateParam('radius', this.value, 'px')" step="5" type="range" value="140"/>
+</div>
+<!-- Slider 5: Rotation Chaos -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-code-caps text-label-code-caps text-on-surface-variant">ROTATION CHAOS</label>
+<div class="px-space-xs py-space-2xs bg-surface-container rounded-DEFAULT font-label-numeric text-label-numeric text-on-surface" id="val-chaos">180°</div>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-full appearance-none accent-tertiary cursor-pointer" max="360" min="0" oninput="updateParam('chaos', this.value, '°')" step="5" type="range" value="180"/>
+</div>
+<!-- Palette Selector -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-code-caps text-label-code-caps text-on-surface-variant">CHROMATIC THEME</span>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="palette-btn active flex flex-col p-space-xs rounded-lg bg-surface-container-high text-left gap-space-2xs shadow-sm" onclick="setPalette('origami-sunset')">
+<div class="flex gap-1 h-3 rounded overflow-hidden">
+<span class="w-1/3 bg-primary-container"></span>
+<span class="w-1/3 bg-secondary-fixed"></span>
+<span class="w-1/3 bg-surface-container-lowest"></span>
+</div>
+<span class="font-label-code-caps text-[10px] text-on-surface truncate font-semibold">Origami Sunset</span>
+</button>
+<button class="palette-btn flex flex-col p-space-xs rounded-lg bg-surface-container text-left gap-space-2xs" onclick="setPalette('blueprint-cyan')">
+<div class="flex gap-1 h-3 rounded overflow-hidden">
+<span class="w-1/3 bg-secondary"></span>
+<span class="w-1/3 bg-secondary-fixed-dim"></span>
+<span class="w-1/3 bg-surface-variant"></span>
+</div>
+<span class="font-label-code-caps text-[10px] text-on-surface truncate">Blueprint Cyan</span>
+</button>
+<button class="palette-btn flex flex-col p-space-xs rounded-lg bg-surface-container text-left gap-space-2xs" onclick="setPalette('ink-monochrome')">
+<div class="flex gap-1 h-3 rounded overflow-hidden">
+<span class="w-1/3 bg-inverse-surface"></span>
+<span class="w-1/3 bg-surface-dim"></span>
+<span class="w-1/3 bg-surface-container-lowest"></span>
+</div>
+<span class="font-label-code-caps text-[10px] text-on-surface truncate">Ink Mono</span>
+</button>
+</div>
+</div>
+<!-- Accessibility Reduced Motion Toggle -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg mt-space-2xs">
+<div class="flex flex-col min-w-0 pr-space-sm">
+<span class="font-headline-sm text-[13px] text-on-surface">Respect Reduced Motion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Replaces kinetic blast with subtle opacity crossfade</span>
+</div>
+<button class="w-11 h-6 rounded-full bg-surface-container-highest p-0.5 transition-colors duration-200 ease-in-out shrink-0 relative" id="toggle-reduced-motion" onclick="toggleMotionAccessibility()">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform duration-200" id="toggle-thumb"></div>
+</button>
+</div>
+</div>
+</div>
+<!-- Production Code Exporter Terminal -->
+<div class="flex flex-col bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-lg">
+<!-- Code Inspector Tabs Header -->
+<div class="flex items-center justify-between px-space-md pt-space-sm bg-surface-dim/20">
+<div class="flex items-center gap-space-2xs overflow-x-auto no-scrollbar">
+<button class="code-tab px-space-sm py-space-xs rounded-t-lg bg-inverse-surface text-primary-fixed-dim font-code-inspector text-code-inspector font-semibold shadow-sm" id="tab-r3f" onclick="switchCodeTab('r3f')">React (R3F)</button>
+<button class="code-tab px-space-sm py-space-xs rounded-t-lg text-surface-variant hover:text-white font-code-inspector text-code-inspector" id="tab-vanilla" onclick="switchCodeTab('vanilla')">Vanilla Three.js</button>
+<button class="code-tab px-space-sm py-space-xs rounded-t-lg text-surface-variant hover:text-white font-code-inspector text-code-inspector" id="tab-ts" onclick="switchCodeTab('ts')">TypeScript</button>
+<button class="code-tab px-space-sm py-space-xs rounded-t-lg text-surface-variant hover:text-white font-code-inspector text-code-inspector" id="tab-json" onclick="switchCodeTab('json')">JSON Preset</button>
+</div>
+<div class="flex items-center gap-space-2xs pb-space-xs">
+<span class="font-label-code-caps text-[10px] text-surface-variant/80">ESM READY</span>
+</div>
+</div>
+<!-- Active Live Syntax Box -->
+<div class="relative p-space-md bg-inverse-surface overflow-x-auto">
+<pre class="font-code-inspector text-code-inspector leading-relaxed text-surface-variant select-all" id="code-snippet"><span class="text-tertiary-fixed-dim">import</span> { <span class="text-secondary-fixed">PaperStorm</span> } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed-dim">"@motionforge/react"</span>;
+
+<span class="text-tertiary-fixed-dim">export default function</span> <span class="text-secondary-fixed">HeroScene</span>() {
+  <span class="text-tertiary-fixed-dim">return</span> (
+    &lt;<span class="text-secondary-fixed">PaperStorm</span>
+      <span class="text-primary-fixed-dim">fragmentCount</span>={<span class="text-secondary-fixed-dim" id="code-val-frag">180</span>}
+      <span class="text-primary-fixed-dim">intensity</span>={<span class="text-secondary-fixed-dim" id="code-val-inten">1.4</span>}
+      <span class="text-primary-fixed-dim">duration</span>={<span class="text-secondary-fixed-dim" id="code-val-dur">1.8</span>}
+      <span class="text-primary-fixed-dim">palette</span>=<span class="text-primary-fixed-dim" id="code-val-pal">"origami-sunset"</span>
+      <span class="text-primary-fixed-dim">interaction</span>=<span class="text-primary-fixed-dim">"pointer"</span>
+    /&gt;
+  );
+}</pre>
+</div>
+<!-- Dependency Guarantee Badges -->
+<div class="flex items-center flex-wrap gap-space-xs px-space-md py-space-xs bg-surface-container-highest/10 text-surface-variant font-label-code-caps text-label-code-caps">
+<div class="flex items-center gap-space-2xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>three &gt;= 0.150.0</span>
+</div>
+<div class="h-3 w-px bg-surface-variant/30"></div>
+<div class="flex items-center gap-space-2xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>@react-three/fiber &gt;= 8.0</span>
+</div>
+<div class="h-3 w-px bg-surface-variant/30"></div>
+<div class="flex items-center gap-space-2xs text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+<span>Zero Lock-in</span>
+</div>
+</div>
+<!-- Export Action Footers -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-space-md gap-space-sm bg-surface-container-highest/20">
+<button class="h-11 px-space-lg rounded-lg bg-primary-container text-on-primary font-headline-sm text-[14px] flex items-center justify-center gap-space-xs shadow-md transition-transform active:translate-y-0.5" id="btn-copy-code" onclick="copyComponentCode()">
+<span class="material-symbols-outlined text-[18px]" id="copy-icon">content_copy</span>
+<span id="copy-btn-label">Copy Component</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="flex-1 sm:flex-none h-11 px-space-md rounded-lg bg-surface-container-highest/30 hover:bg-surface-container-highest/50 text-inverse-on-surface font-label-code-caps text-label-code-caps flex items-center justify-center gap-space-2xs transition-colors" onclick="downloadTsxPackage()">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>.TSX Package</span>
+</button>
+<button class="flex-1 sm:flex-none h-11 px-space-md rounded-lg bg-surface-container-highest/30 hover:bg-surface-container-highest/50 text-inverse-on-surface font-label-code-caps text-label-code-caps flex items-center justify-center gap-space-2xs transition-colors" onclick="viewNpmRecipe()">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>NPM Recipe</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Bar for Tactile Feedback -->
+<div class="fixed bottom-20 left-1/2 transform -translate-x-1/2 px-space-md py-space-xs bg-inverse-surface text-inverse-on-surface rounded-full shadow-2xl font-label-code-caps text-label-code-caps flex items-center gap-space-xs opacity-0 pointer-events-none transition-all duration-300 z-50" id="toast-pill">
+<span class="material-symbols-outlined text-secondary-fixed text-[16px]">verified</span>
+<span id="toast-text">Component copied to clipboard!</span>
+</div>
+</div>
+<script>
+  // State Store
+  const kineticState = {
+    fragments: 180,
+    intensity: 1.4,
+    duration: 1.8,
+    radius: 140,
+    chaos: 180,
+    palette: 'origami-sunset',
+    reducedMotion: false,
+    isPlaying: true,
+    activeTab: 'r3f'
+  };
+
+  function updateParam(param, val, unit) {
+    kineticState[param] = parseFloat(val);
+    const labelElem = document.getElementById('val-' + param);
+    if (labelElem) labelElem.innerText = val + unit;
+
+    if (param === 'fragments') {
+      const hudElem = document.getElementById('hud-fragment-val');
+      if (hudElem) hudElem.innerText = val;
+    }
+    
+    // Animate stage preview in real-time
+    deformPreviewCluster();
+    regenerateCode();
+  }
+
+  function applyPreset(name, frags, inten, dur, rad, chaos) {
+    kineticState.fragments = frags;
+    kineticState.intensity = inten;
+    kineticState.duration = dur;
+    kineticState.radius = rad;
+    kineticState.chaos = chaos;
+
+    document.getElementById('val-fragments').innerText = frags;
+    document.getElementById('val-intensity').innerText = inten + 'x';
+    document.getElementById('val-duration').innerText = dur + 's';
+    document.getElementById('val-radius').innerText = rad + 'px';
+    document.getElementById('val-chaos').innerText = chaos + '°';
+    document.getElementById('hud-fragment-val').innerText = frags;
+
+    // Highlight preset pill
+    document.querySelectorAll('.preset-pill').forEach(btn => {
+      btn.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface');
+    });
+    event.currentTarget.classList.remove('bg-surface-container-high', 'text-on-surface');
+    event.currentTarget.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+
+    triggerExplode();
+    regenerateCode();
+    showToast('Applied ' + name.toUpperCase() + ' kinetic preset');
+  }
+
+  function setPalette(paletteName) {
+    kineticState.palette = paletteName;
+    document.querySelectorAll('.palette-btn').forEach(btn => {
+      btn.classList.remove('active', 'bg-surface-container-high');
+      btn.classList.add('bg-surface-container');
+    });
+    event.currentTarget.classList.remove('bg-surface-container');
+    event.currentTarget.classList.add('active', 'bg-surface-container-high');
+
+    const render = document.getElementById('origami-render');
+    if (paletteName === 'blueprint-cyan') {
+      render.style.filter = 'hue-rotate(160deg) saturate(1.4)';
+    } else if (paletteName === 'ink-monochrome') {
+      render.style.filter = 'grayscale(100%) contrast(1.2)';
+    } else {
+      render.style.filter = 'none';
+    }
+
+    regenerateCode();
+  }
+
+  function toggleMotionAccessibility() {
+    kineticState.reducedMotion = !kineticState.reducedMotion;
+    const thumb = document.getElementById('toggle-thumb');
+    const toggle = document.getElementById('toggle-reduced-motion');
+    if (kineticState.reducedMotion) {
+      thumb.classList.add('translate-x-5', 'bg-primary-container');
+      toggle.classList.add('bg-primary-fixed');
+      showToast('Reduced Motion: Crossfade Fallback Active');
+    } else {
+      thumb.classList.remove('translate-x-5', 'bg-primary-container');
+      toggle.classList.remove('bg-primary-fixed');
+      showToast('Kinetic Simulation Restored');
+    }
+    regenerateCode();
+  }
+
+  function togglePlayState() {
+    kineticState.isPlaying = !kineticState.isPlaying;
+    const icon = document.getElementById('play-icon');
+    const text = document.getElementById('play-text');
+    if (kineticState.isPlaying) {
+      icon.innerText = 'pause';
+      text.innerText = 'PAUSE';
+    } else {
+      icon.innerText = 'play_arrow';
+      text.innerText = 'PLAY';
+    }
+  }
+
+  function triggerExplode() {
+    const cluster = document.getElementById('origami-cluster');
+    const render = document.getElementById('origami-render');
+    const particles = document.getElementById('particle-field').children;
+    
+    if (kineticState.reducedMotion) {
+      render.classList.add('opacity-30');
+      setTimeout(() => render.classList.remove('opacity-30'), 600);
+      return;
+    }
+
+    // Kinetic dispersion visual delight
+    cluster.classList.add('scale-125');
+    render.classList.add('opacity-75', 'rotate-12');
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].style.transform = `translate(${(i - 2) * 85}px, ${(i % 2 === 0 ? -1 : 1) * 75}px) rotate(${i * 80}deg) scale(1.4)`;
+    }
+
+    setTimeout(() => {
+      cluster.classList.remove('scale-125');
+      render.classList.remove('opacity-75', 'rotate-12');
+      deformPreviewCluster();
+    }, 700);
+  }
+
+  function triggerReassemble() {
+    const cluster = document.getElementById('origami-cluster');
+    const render = document.getElementById('origami-render');
+    const particles = document.getElementById('particle-field').children;
+
+    render.style.transform = 'scale(0.85) rotate(0deg)';
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].style.transform = 'translate(0px, 0px) scale(0.6)';
+    }
+
+    setTimeout(() => {
+      render.style.transform = 'scale(1) rotate(0deg)';
+      deformPreviewCluster();
+      showToast('Reassembled 180 mesh fragments');
+    }, 400);
+  }
+
+  function resetDefaults() {
+    applyPreset('cinematic', 180, 1.4, 1.8, 140, 180);
+    setPalette('origami-sunset');
+    showToast('Reset to default drafting benchmarks');
+  }
+
+  function deformPreviewCluster() {
+    const particles = document.getElementById('particle-field').children;
+    const spread = kineticState.intensity * 25;
+    const rot = kineticState.chaos / 4;
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].style.transform = `translate(${(i - 2) * spread}px, ${(i % 2 === 0 ? -20 : 25)}px) rotate(${rot * (i + 1)}deg)`;
+    }
+  }
+
+  function switchCodeTab(tab) {
+    kineticState.activeTab = tab;
+    document.querySelectorAll('.code-tab').forEach(b => {
+      b.classList.remove('bg-inverse-surface', 'text-primary-fixed-dim', 'font-semibold');
+      b.classList.add('text-surface-variant');
+    });
+    const activeBtn = document.getElementById('tab-' + tab);
+    if (activeBtn) {
+      activeBtn.classList.remove('text-surface-variant');
+      activeBtn.classList.add('bg-inverse-surface', 'text-primary-fixed-dim', 'font-semibold');
+    }
+    regenerateCode();
+  }
+
+  function regenerateCode() {
+    const codeContainer = document.getElementById('code-snippet');
+    const { fragments, intensity, duration, palette, reducedMotion, activeTab } = kineticState;
+
+    if (activeTab === 'r3f') {
+      codeContainer.innerHTML = `<span class="text-tertiary-fixed-dim">import</span> { <span class="text-secondary-fixed">PaperStorm</span> } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed-dim">"@motionforge/react"</span>;\n\n<span class="text-tertiary-fixed-dim">export default function</span> <span class="text-secondary-fixed">HeroScene</span>() {\n  <span class="text-tertiary-fixed-dim">return</span> (\n    &lt;<span class="text-secondary-fixed">PaperStorm</span>\n      <span class="text-primary-fixed-dim">fragmentCount</span>={<span class="text-secondary-fixed-dim">${fragments}</span>}\n      <span class="text-primary-fixed-dim">intensity</span>={<span class="text-secondary-fixed-dim">${intensity.toFixed(1)}</span>}\n      <span class="text-primary-fixed-dim">duration</span>={<span class="text-secondary-fixed-dim">${duration.toFixed(1)}</span>}\n      <span class="text-primary-fixed-dim">palette</span>=<span class="text-primary-fixed-dim">"${palette}"</span>\n      <span class="text-primary-fixed-dim">reducedMotion</span>={<span class="text-secondary-fixed-dim">${reducedMotion}</span>}\n      <span class="text-primary-fixed-dim">interaction</span>=<span class="text-primary-fixed-dim">"pointer"</span>\n    /&gt;\n  );\n}`;
+    } else if (activeTab === 'vanilla') {
+      codeContainer.innerHTML = `<span class="text-tertiary-fixed-dim">import</span> * <span class="text-tertiary-fixed-dim">as</span> THREE <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed-dim">"three"</span>;\n<span class="text-tertiary-fixed-dim">import</span> { <span class="text-secondary-fixed">PaperMesh</span> } <span class="text-tertiary-fixed-dim">from</span> <span class="text-primary-fixed-dim">"@motionforge/core"</span>;\n\n<span class="text-tertiary-fixed-dim">const</span> storm = <span class="text-tertiary-fixed-dim">new</span> <span class="text-secondary-fixed">PaperMesh</span>({\n  count: <span class="text-secondary-fixed-dim">${fragments}</span>,\n  intensity: <span class="text-secondary-fixed-dim">${intensity.toFixed(1)}</span>,\n  duration: <span class="text-secondary-fixed-dim">${duration.toFixed(1)}</span>,\n  palette: <span class="text-primary-fixed-dim">"${palette}"</span>\n});\nscene.<span class="text-secondary-fixed">add</span>(storm.mesh);`;
+    } else if (activeTab === 'ts') {
+      codeContainer.innerHTML = `<span class="text-tertiary-fixed-dim">export interface</span> <span class="text-secondary-fixed">PaperStormConfig</span> {\n  fragments: <span class="text-secondary-fixed-dim">${fragments}</span>;\n  intensity: <span class="text-secondary-fixed-dim">${intensity.toFixed(1)}</span>;\n  duration: <span class="text-secondary-fixed-dim">${duration.toFixed(1)}</span>;\n  palette: <span class="text-primary-fixed-dim">"${palette}"</span>;\n  reducedMotion: <span class="text-secondary-fixed-dim">${reducedMotion}</span>;\n}`;
+    } else {
+      codeContainer.innerHTML = `{\n  <span class="text-primary-fixed-dim">"name"</span>: <span class="text-primary-fixed-dim">"PaperStorm"</span>,\n  <span class="text-primary-fixed-dim">"fragments"</span>: <span class="text-secondary-fixed-dim">${fragments}</span>,\n  <span class="text-primary-fixed-dim">"intensity"</span>: <span class="text-secondary-fixed-dim">${intensity.toFixed(1)}</span>,\n  <span class="text-primary-fixed-dim">"duration"</span>: <span class="text-secondary-fixed-dim">${duration.toFixed(1)}</span>,\n  <span class="text-primary-fixed-dim">"palette"</span>: <span class="text-primary-fixed-dim">"${palette}"</span>\n}`;
+    }
+  }
+
+  function copyComponentCode() {
+    const rawCode = document.getElementById('code-snippet').innerText;
+    navigator.clipboard.writeText(rawCode).then(() => {
+      const copyBtn = document.getElementById('copy-btn-label');
+      const copyIcon = document.getElementById('copy-icon');
+      copyBtn.innerText = 'Copied to Clipboard!';
+      copyIcon.innerText = 'check';
+      showToast('Component code copied!');
+      setTimeout(() => {
+        copyBtn.innerText = 'Copy Component';
+        copyIcon.innerText = 'content_copy';
+      }, 2000);
+    });
+  }
+
+  function downloadTsxPackage() {
+    showToast('Exporting PaperStorm.tsx bundle...');
+  }
+
+  function viewNpmRecipe() {
+    showToast('NPM: npm install @motionforge/react three');
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast-pill');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+
+  // Interactive Stage Drag Ripple Feedback
+  const stage = document.getElementById('canvas-stage');
+  const ripple = document.getElementById('ripple-circle');
+  stage.addEventListener('pointerdown', (e) => {
+    const rect = stage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.remove('scale-0', 'opacity-0');
+    ripple.classList.add('scale-150', 'opacity-100');
+    setTimeout(() => {
+      ripple.classList.remove('scale-150', 'opacity-100');
+      ripple.classList.add('scale-0', 'opacity-0');
+    }, 350);
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-sm flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="lab-hero" href="#"><span class="material-symbols-outlined text-[22px]">biotech</span><span class="font-label-code-caps text-label-code-caps">Lab Hero</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="gallery" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome_motion</span><span class="font-label-code-caps text-label-code-caps">Gallery</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-space-2xs transition-colors text-primary font-semibold" data-path="playground" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-code-caps text-label-code-caps">Playground</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs py-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="code-&amp;-docs" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-code-caps text-label-code-caps">Code &amp; Docs</span></a></div></nav></body></html>
